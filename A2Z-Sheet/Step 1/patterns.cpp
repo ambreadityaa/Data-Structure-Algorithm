@@ -213,36 +213,127 @@ void pattern_12()
 
 void pattern_13()
 {
-    int n=1;
-    for(int i=1;i<6;i++){
-        for(int  j=1;j<6;j++){
-            
-            if(j<=i){
-                cout<<n<<" ";
+    int n = 1;
+    for (int i = 1; i < 6; i++)
+    {
+        for (int j = 1; j < 6; j++)
+        {
+
+            if (j <= i)
+            {
+                cout << n << " ";
                 n++;
             }
-            
         }
+        cout << "\n";
+    }
+}
+
+void pattern_14()
+{
+
+    for (int i = 1; i < 6; i++)
+    {
+        for (int j = 1; j < 6; j++)
+        {
+            if (j <= i)
+            {
+                cout << char((64 + j));
+            }
+        }
+        cout << "\n";
+    }
+}
+
+void pattern_15()
+{
+    for (int i = 5; i >= 1; i++)
+    {
+        for (int j = 1; j < 6; j++)
+        {
+            if (j <= i)
+            {
+                cout << char((64 + j));
+            }
+        }
+        cout << "\n";
+    }
+}
+
+void pattern_16()
+{
+    for (int i = 1; i < 6; i++)
+    {
+        for (int j = 1; j < 6; j++)
+        {
+            if (j <= i)
+            {
+                cout << char((64 + i));
+            }
+        }
+        cout << "\n";
+    }
+}
+
+void pattern_17()
+{
+    int l = 4, u = 4;
+    for (int i = 1; i < 5; i++)
+    {int m =1, n=i;
+        for (int j = 1; j < 9; j++)
+        { 
+            if (j >= l && j <= u)
+            {
+                if (j == l or j == u)
+                {
+                    cout << char(65);
+                }else if(j==((l+u)/2)){
+                   
+                    cout<<char(64+i);
+                }else{
+                    if(j<((l+u)/2)){
+                        cout<<char(65+m);
+                        m++;
+                    }
+                    if(j>((l+u)/2)){
+                        --n;
+                        cout<<char(64+n);
+                        
+                    }
+                }
+            }
+            else{
+                cout<<" ";
+            }
+        }
+        --l;
+        ++u;
         cout<<"\n";
     }
 }
 
-void pattern_14(){
-    
-    for(int i=1;i<6;i++){
-        for(int j=1;j<6;j++){
-            if(j<=i){
-                cout<<char((64+j));
+void pattern_18() {
+   
+    for(int i =5;i>=1;i--){
+         int flag =i;
+        for(int j=5;j>=1;j--){
+            if(j>=i){
+                cout<<char(64+flag);
+                flag++;
             }
         }
         cout<<"\n";
     }
-    
 }
 
-void pattern_15(){
-    
-}
+void pattern_19() {}
+
+void pattern_20() {}
+
+void pattern_21() {}
+
+void pattern_22() {}
+
 int main()
 {
 
@@ -306,11 +397,38 @@ int main()
     {
         pattern_14();
     }
-     else if (choice == 15)
+    else if (choice == 15)
     {
         pattern_15();
     }
-
+    else if (choice == 16)
+    {
+        pattern_16();
+    }
+    else if (choice == 17)
+    {
+        pattern_17();
+    }
+    else if (choice == 18)
+    {
+        pattern_18();
+    }
+    else if (choice == 19)
+    {
+        pattern_19();
+    }
+    else if (choice == 20)
+    {
+        pattern_20();
+    }
+    else if (choice == 21)
+    {
+        pattern_21();
+    }
+    else
+    {
+        pattern_22();
+    }
 
     return 0;
 }
